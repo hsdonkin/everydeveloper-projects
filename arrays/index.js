@@ -1,5 +1,5 @@
 let sayHello = (name) => {
-  console.log('Hello' + name + '!');
+  console.log('Hello ' + name + '!');
 };
 
 sayHello('reader'); // => "Hello reader!"
@@ -9,7 +9,7 @@ sayHello('Paul'); // => "Hello Paul!"
 sayHello('George'); // => "Hello George!"
 sayHello('Ringo'); // => "Hello Ringo!"
 
-const beatles = [];
+let beatles = [];
 beatles.push('John'); // => ["John"]
 beatles.push('Paul'); // => ["John", "Paul"]
 beatles.push('George'); // => ["John", "Paul", "George"]
@@ -27,8 +27,8 @@ beatles.splice(0, 2); // => return ["Paul, "George"], []
 beatles = ['John', 'Paul', 'George', 'Ringo'];
 
 sayHello = (array) => {
-  for (i = 0; i < array.length; i++;){
-    console.log('Hello,' + array[i] + "!");
+  for (i = 0; i < array.length; i++) {
+    console.log('Hello ' + array[i] + '!');
   }
 };
 
@@ -40,10 +40,11 @@ sayHello(beatles);
 
 beatles.sort(); // => ["George", "John", "Paul", "Ringo"]
 
-beatles = ["John", "Paul", "George", "Ringo"];
+beatles = ['John', 'Paul', 'George', 'Ringo'];
 
-const sortDesc = (a,b) => {
-  if (a < b){
+// comparison function has to return positive / negative values
+const sortDesc = (a, b) => {
+  if (a < b) {
     return 1;
   } else {
     return -1;
@@ -52,6 +53,6 @@ const sortDesc = (a,b) => {
 
 beatles.sort(sortDesc); // => ["Ringo", "Paul", "John", "George"]
 
-beatles = ["John", "Paul", "George", "Ringo"];
+beatles = ['John', 'Paul', 'George', 'Ringo'];
 beatles.sort(); // => ["George", "John", "Paul", "Ringo"]
 beatles.reverse(); // => ["Ringo", "Paul", "John", "George"]

@@ -1,5 +1,7 @@
 # Sort and Loop Through Arrays in JavaScript
 
+![Image of computer!](https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80)
+
 One of the most powerful aspects of programming is the ability to repeat an action many times.
 
 Here, we've created a function which greets anyone we tell it to:
@@ -7,7 +9,7 @@ Here, we've created a function which greets anyone we tell it to:
 ```
 // this function takes a string as an argument
 const sayHello = (name) => {
-  console.log("Hello" + name + "!");
+  console.log("Hello " + name + "!");
 };
 
 sayHello("reader"); // => "Hello reader!"
@@ -16,26 +18,28 @@ sayHello("reader"); // => "Hello reader!"
 But what if we catch our favorite band behind the venue and need to say hello really quickly? Writing it out that way would get tedious!
 
 ```
-sayHello("John") // => "Hello John!"
-sayHello("Paul") // => "Hello Paul!"
-sayHello("George") // => "Hello George!"
-sayHello("Ringo") // => "Hello Ringo!"
+sayHello("John"); // => "Hello John!"
+sayHello("Paul"); // => "Hello Paul!"
+sayHello("George"); // => "Hello George!"
+sayHello("Ringo"); // => "Hello Ringo!"
 ```
 
-At this point, they would be gone! Let's make things easier on ourselves, and use an array to make our code more lightweight and versatile.
+At this point, they would be gone! Let's make things easier on ourselves, and learn to combine arrays and loops to make our code more lightweight and versatile.
 
 ## Let It Be an Array
 
-Why couldn't Paul McCartney learn Javascript? He much preferred writing in C! All jokes aside though, arrays are useful as containers for other things, whether they are strings, objects, or even other arrays. Let's use one here to keep track of the band:
+Why couldn't Paul McCartney learn Javascript? He much preferred writing in C!
+
+All jokes aside though, arrays are useful as containers for other things, whether they are strings, objects, or even other arrays. Let's use one here to keep track of the band:
 
 ```
-const beatles = [];
+let beatles = [];
 ```
 
 It's not very full at the moment, so let's add a couple of members to the group!
 
 ```
-const beatles = [];
+let beatles = [];
 beatles.push("John"); // => ["John"]
 beatles.push("Paul"); // => ["John", "Paul"]
 beatles.push("George"); // => ["John", "Paul", "George"]
@@ -49,7 +53,7 @@ Arrays have a couple of traits that make them great at organizing information in
 Here, let's look at the numbers associated with each of our Beatles. By listing their names inside of the array, they're together by default:
 
 ```
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 console.log(beatles[0]); // => "John"
 console.log(beatles[1]); // => "Paul"
 console.log(beatles[2]); // => "George"
@@ -61,7 +65,7 @@ Wait a second! I thought that there were four Beatles! Why are we counting 0-3? 
 All good things must come to an end, and so let's break up the band:
 
 ```
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 beatles.shift(); // => returns "John", ["Paul", "George", "Ringo"]
 beatles.pop(); // => return "Ringo", ["Paul", "George"]
 beatles.splice(0,2); // => return ["Paul, "George"], []
@@ -71,16 +75,14 @@ There are several ways to change the contents of an array with the built-in meth
 
 ## All You Need is Loops
 
-Show a function that accepts an array as input. Within the function, use a for loop that prints out each item of the array on its own line. Explain how it works.
-
 One of the primary uses for arrays is to iterate, or cycle through, its contents and apply a piece of logic to each item. This version of the `sayHello()` function we wrote earlier takes an array as an argument, instead of a string!
 
 ```
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 
 const sayHello = (array) => {
-  for (i = 0; i < array.length; i++;){
-    console.log('Hello,' + array[i] + "!");
+  for (i = 0; i < array.length; i++){
+    console.log("Hello " + array[i] + "!");
   }
 };
 
@@ -101,12 +103,10 @@ for ("Starting At Zero"; "Stop When At End Of Array"; "Add One To Starting Value
 
 ## Here Comes the Sort
 
-Show the code required to sort the array alphabetically, ascending then descending. After each sort, call the function again. Explain how it works.
-
 Everyone loves to debate -- who is the #1 Beatle? Let's look at another useful array method, `sort()`, and see if we can get to the bottom of it, and find out who the most popular Beatle is!
 
 ```
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 beatles.sort(); // => ["George", "John", "Paul", "Ringo"]
 ```
 
@@ -124,21 +124,19 @@ const sortDesc = (a,b) => {
   }
 };
 
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 beatles.sort(sortDesc); // => ["Ringo", "Paul", "John", "George"]
 ```
 
 Or, for the true developer in us all:
 
 ```
-const beatles = ["John", "Paul", "George", "Ringo"];
+let beatles = ["John", "Paul", "George", "Ringo"];
 beatles.sort(); // => ["George", "John", "Paul", "Ringo"]
 beatles.reverse(); // => ["Ringo", "Paul", "John", "George"]
 ```
 
 ## Get Back to Learning JavaScript
-
-Provide an overview of what they learned, explain some next steps, and provide a link to help them take that step.
 
 So, we've covered how to create an `Array`, how to add and remove items from it, and how to repeat actions across the contents of an array! What next? With these new tools, we can do two things -- first, use arrays to keep values in our code neat and organized, and second, efficiently run functions many more times than we could by hand!
 
