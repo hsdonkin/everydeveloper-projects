@@ -28,7 +28,7 @@ At this point, they would be gone! Let's make things easier on ourselves, and le
 
 ## Let It Be an Array
 
-Why couldn't Paul McCartney learn Javascript? He much preferred writing in C!
+Why couldn't Paul McCartney learn JavaScript? He much preferred writing in C!
 
 All jokes aside though, arrays are useful as containers for other things, whether they are strings, objects, or even other arrays. Let's use one here to keep track of the band:
 
@@ -96,12 +96,12 @@ sayHello(beatles);
 Notice that we have a new style of function here, `for()`. This is a powerful tool that lets us execute an action any number of times. It uses a default argument called `i`, which represents the **initialization** of the loop. Writing out what this basic loop does, in English:
 
 ```
-for ("Starting At Zero"; "Stop When At End Of Array"; "Add One To Starting Value If Not"){
+for ("Starting At Zero"; "Compare To End Condition"; "Add One To Starting Value If Not"){
   // say hi to each Beatle in turn!
 };
 ```
 
-So, on the first loop, the value of `i` is 0, letting us access the value "John" inside of our array! By incrementing `i` by one each time, using `i++`, `i += 1` or the long version `i = i + 1` we can retrieve all of the values from our `beatles` array. We stop when `i` fails to be less than `beatles.length`, which is 4 items long. If we had let the loop run one bonus round and tried to access `beatles[4]`, we would have logged `"Hello undefined!"` to the console. Yikes, a fifth Beatle!
+So, on the first loop, the value of `i` is 0, letting us access the value "John" inside of our array! By incrementing `i` by one each time, using `i++`, `i += 1` or the long version `i = i + 1`, we can retrieve all of the values from our `beatles` array. We stop when `i` fails to be less than `beatles.length`, which is 4 items long. If we had let the loop run one bonus round with `i === 4` and tried to access `beatles[4]`, we would have logged `"Hello undefined!"` to the console. Yikes, a fifth Beatle!
 
 ## Here Comes the Sort
 
