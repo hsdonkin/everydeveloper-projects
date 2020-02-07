@@ -71,11 +71,11 @@ beatles.pop(); // => return "Ringo", ["Paul", "George"]
 beatles.splice(0,2); // => return ["Paul, "George"], []
 ```
 
-There are several ways to change the contents of an array with the built-in methods `shift()`, `pop()`, and `splice()`! Each of them does something slightly different as you can see. You can read more about these methods on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Common_operations).
+There are several ways to permanently change the contents of an array with the built-in methods `shift()`, `pop()`, and `splice()`! Each of them does something slightly different as you can see. You can read more about these methods on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Common_operations).
 
 ## All You Need is Loops
 
-One of the primary uses for arrays is to iterate, or cycle through, its contents and apply a piece of logic to each item. This version of the `sayHello()` function we wrote earlier takes an array as an argument, instead of a string!
+One of the primary use cases for arrays is to iterate, or cycle through, its contents and apply a piece of logic to each item. This version of the `sayHello()` function we wrote earlier takes an array as an argument, instead of a string!
 
 ```
 let beatles = ["John", "Paul", "George", "Ringo"];
@@ -97,9 +97,11 @@ Notice that we have a new style of function here, `for()`. This is a powerful to
 
 ```
 for ("Starting At Zero"; "Stop When At End Of Array"; "Add One To Starting Value If Not"){
-  // say hi to the Beatles here!
+  // say hi to each Beatle in turn!
 };
 ```
+
+So, on the first loop, the value of `i` is 0, letting us access the value "John" inside of our array! By incrementing `i` by one each time, using `i++`, `i += 1` or the long version `i = i + 1` we can retrieve all of the values from our `beatles` array. We stop when `i` fails to be less than `beatles.length`, which is 4 items long. If we had let the loop run one bonus round and tried to access `beatles[4]`, we would have logged `"Hello undefined!"` to the console. Yikes, a fifth Beatle!
 
 ## Here Comes the Sort
 
